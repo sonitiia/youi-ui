@@ -1,0 +1,16 @@
+export const DEFAULT_ROUTE = "/";
+
+export const LOGIN_ROUTE = "/login";
+export const FORGET_PASSWORD_ROUTE = "/login/forget-password";
+export const FORGOT_PASSWORD = "/forgot-password";
+export const FORGOT_PASSWORD_RESET = "/forgot-password-reset";
+
+
+export const FULL_WIDTH_ROUTE = "/";
+
+export const ABOUT_ROUTE = "/about";
+export const PROFILE_ROUTE = "/profile";
+export const FOLLOWERS_ROUTE = "/profile/followers";
+export const FOLLOWING_ROUTE = "/profile/following";
+
+export const LOGOUT_ROUTE = "/logout";
