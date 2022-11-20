@@ -5,12 +5,14 @@ import {
     FULL_WIDTH_ROUTE,
     LOGIN_ROUTE,
     FORGOT_PASSWORD,
+    ABOUT_ROUTE,
 } from "./Routes";
 import DefaultContainer from "./layouts/DefaultContainer";
 import FullWidthContainer from "./layouts/FullWidthContainer";
 import PageNotFoundRoute from "../routes/PageNotFoundRoute";
 import LoginRoute from "../routes/LoginRoute";
 import ForgotPasswordRoute from "../routes/ForgotPasswordRoute";
+import AboutRoute from "../routes/AboutRoute";
 
 const Router = () => {
     return (
@@ -22,6 +24,7 @@ const Router = () => {
                     <Route path="*" element={<PageNotFoundRoute />} />
                 </Route>
                 <Route path={FULL_WIDTH_ROUTE} element={<FullWidthContainer />} >
+                    <Route path={ABOUT_ROUTE} element={<AboutRoute />} />
                     <Route path="*" element={<PageNotFoundRoute />} />
                 </Route>
             </Routes>
