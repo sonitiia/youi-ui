@@ -46,11 +46,14 @@ export const theme = createTheme({
         MuiCssBaseline: {
             styleOverrides: {
                 html: {
-                    height: "100%",
+                    minHeight: "100%",
                     fontFamily: "Nunito Sans",
+                    background: "linear-gradient(66deg, #f3ecd1, #f5dddd)",
                 },
                 body: {
                     height: "100%",
+                    backgroundColor: "transparent"
+
                 },
                 "#root, main": {
                     height: "100%",

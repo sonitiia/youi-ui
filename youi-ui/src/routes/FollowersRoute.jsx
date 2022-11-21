@@ -4,7 +4,7 @@ import { Link as RouterLink } from "react-router-dom";
 import ProfileRoute from "./ProfileRoute";
 import FollowerBox from "../components/FollowerBox";
 
-const Followers = () => {
+const FollowersRoute = () => {
     return (
         <Box>
             <Dialog
@@ -42,7 +42,8 @@ const Followers = () => {
                     <FollowerBox />
                     <FollowerBox />
                     <FollowerBox />
-
+                    <FollowerBox />
+                    <FollowerBox />
                 </DialogContent>
                 <DialogActions>
                     <Button
@@ -59,7 +60,7 @@ const Followers = () => {
                             mt: 3
                         }}
                     >
-                        back to profile
+                        back
                     </Button>
                 </DialogActions>
             </Dialog>
@@ -68,38 +69,4 @@ const Followers = () => {
     );
 }
 
-export default Followers;
-
-
-// const Followers = () => {
-//     return (
-//         <>
-//             <Card elevation={0}
-//                 sx={{
-//                     zIndex: 999,
-//                     height: "70%",
-//                     position: "fixed",
-//                     top: "50%",
-//                     left: "50%",
-//                     maxWidth: "800px",
-//                     width: "80%",
-//                     transform: "translate(-50%, -50%)",
-//                     background: (theme) => theme.palette.background.paper,
-//                 }}>
-//                 <Box
-//                     sx={{
-//                         display: "flex",
-//                         flexDirection: "row",
-//                         justifyContent: "space-between"
-//                     }}>
-//                     <Typography>18 followers</Typography>
-//                     <Button>subscribe</Button>
-//                 </Box>
-//             </Card >
-//             <ProfileRoute sx={{ backdropFilter: "sepia(90%)" }}>
-//             </ProfileRoute>
-//         </>
-//     );
-// };
-
-// export default Followers;
+export default FollowersRoute;

@@ -5,12 +5,12 @@ const styles = {
     pin_container: {
         m: "10px",
         p: 0,
-        width: "90vw",
+        width: "95vw",
         position: "absolute",
         left: "50%",
         transform: "translateX(-50%)",
         display: "grid",
-        gridTemplateColumns: "repeat(auto-fill, 250px)",
+        gridTemplateColumns: "repeat(auto-fill, 350px)",
         gridAutoRows: "10px",
         justifyContent: "center"
     }

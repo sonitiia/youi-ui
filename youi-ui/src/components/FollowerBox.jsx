@@ -29,14 +29,14 @@ const FollowerBox = () => {
                         height: 30,
                         mr: 2
                     }} />
-                <Typography variant="body2">sofitymechko</Typography>
+                <Typography variant="body1">sofitymechko</Typography>
             </Box>
             <Button
                 sx={{
                     background: (theme) => theme.palette.primary.main,
                     color: (theme) => theme.palette.primary.light,
                     p: 2,
-                    fontSize: 10,
+                    fontSize: 11,
                     borderRadius: 3
                 }}
             >follow</Button>
