@@ -2,7 +2,7 @@ import { Box, Button, Dialog, DialogActions, DialogContent, DialogTitle } from "
 import { PROFILE_ROUTE } from "../app/Routes";
 import { Link as RouterLink } from "react-router-dom";
 import ProfileRoute from "./ProfileRoute";
-import FollowerBox from "../components/FollowerBox";
+import UserAndAvatar from "../components/UserAndAvatar";
 
 const FollowersRoute = () => {
     return (
@@ -32,18 +32,21 @@ const FollowersRoute = () => {
                     18 followers
                 </DialogTitle>
                 <DialogContent sx={{ p: 0 }}>
-                    <FollowerBox />
-                    <FollowerBox />
-                    <FollowerBox />
-                    <FollowerBox />
-                    <FollowerBox />
-                    <FollowerBox />
-                    <FollowerBox />
-                    <FollowerBox />
-                    <FollowerBox />
-                    <FollowerBox />
-                    <FollowerBox />
-                    <FollowerBox />
+                    <UserAndAvatar />
+                    <UserAndAvatar />
+                    <UserAndAvatar />
+                    <UserAndAvatar />
+                    <UserAndAvatar />
+                    <UserAndAvatar />
+                    <UserAndAvatar />
+                    <UserAndAvatar />
+                    <UserAndAvatar />
+                    <UserAndAvatar />
+                    <UserAndAvatar />
+                    <UserAndAvatar />
+                    <UserAndAvatar />
+                    <UserAndAvatar />
+                    <UserAndAvatar />
                 </DialogContent>
                 <DialogActions>
                     <Button

@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { Box, Button, Card, Grid, IconButton, } from "@mui/material";
 import Post from "../img/sunset.jpg";
-import FollowerBox from "../components/FollowerBox";
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+import UserAndAvatar from '../components/UserAndAvatar';
 
 const PostRoute = () => {
     return (
@@ -64,7 +64,7 @@ const PostRoute = () => {
                         </Button>
                     </Grid>
                     <Grid item xs={12}>
-                        <FollowerBox />
+                        <UserAndAvatar />
                     </Grid>
                     <Grid item xs={12}>
 

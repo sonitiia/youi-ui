@@ -1,8 +1,8 @@
-import { Avatar, Button, Typography } from "@mui/material";
+import { Avatar, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import avatar from "../img/avatar.png";
 
-const FollowerBox = () => {
+const UserAndAvatar = () => {
     return (
         <Box
             sx={{
@@ -31,17 +31,8 @@ const FollowerBox = () => {
                     }} />
                 <Typography variant="body1">sofitymechko</Typography>
             </Box>
-            <Button
-                sx={{
-                    background: (theme) => theme.palette.primary.main,
-                    color: (theme) => theme.palette.primary.light,
-                    p: 2,
-                    fontSize: 11,
-                    borderRadius: 3
-                }}
-            >follow</Button>
         </Box>
     );
 }
 
-export default FollowerBox;
+export default UserAndAvatar;
