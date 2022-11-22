@@ -10,7 +10,9 @@ export const FULL_WIDTH_ROUTE = "/";
 
 export const ABOUT_ROUTE = "/about";
 export const PROFILE_ROUTE = "/profile";
-export const FOLLOWERS_ROUTE = "/profile/followers";
-export const FOLLOWING_ROUTE = "/profile/following";
+export const POST_ROUTE = PROFILE_ROUTE + "/post";
+
+export const FOLLOWERS_ROUTE = PROFILE_ROUTE + "/followers";
+export const FOLLOWING_ROUTE = PROFILE_ROUTE + "/following";
 
 export const LOGOUT_ROUTE = "/logout";
