@@ -1,8 +1,9 @@
 import * as React from 'react';
-import { Box, Button, Card, Grid, IconButton, } from "@mui/material";
-import Post from "../img/sunset.jpg";
+import { Box, Button, Card, IconButton } from "@mui/material";
+import Post from "../img/sunset-small.jpg";
+import UserAndAvatar from "../components/UserAndAvatar";
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-import UserAndAvatar from '../components/UserAndAvatar';
+import CommentList from '../components/comment/CommentList';
 
 const PostRoute = () => {
     return (
@@ -17,7 +18,7 @@ const PostRoute = () => {
                 display: "flex",
                 flexDirection: "row",
                 justifyContent: "space-between",
-                borderRadius: 2
+                borderRadius: 2,
             }}>
             <Card
                 elevation={0}
@@ -37,41 +38,34 @@ const PostRoute = () => {
                     width: "50%",
                     display: "flex",
                     flexDirection: "column",
-                    alignItems: "center",
-                    justifyContent: "space-between",
-                    p: 7
+                    // alignItems: "center",
+                    p: 10,
                 }}>
-                <Grid container>
-                    <Grid item xs={12}
+                <Box sx={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                }}
+                >
+                    <UserAndAvatar />
+                    <IconButton sx={{ p: 0, width: 50, height: 50 }}>
+                        <MoreVertIcon sx={{ color: (theme) => theme.palette.primary.main }} />
+                    </IconButton>
+                    <Button
                         sx={{
-                            display: "flex",
-                            flexDirection: "row",
-                            justifyContent: "flex-start"
+                            height: 50,
+                            width: 90,
+                            borderRadius: 2,
+                            bgcolor: (theme) => theme.palette.primary.main,
+                            color: (theme) => theme.palette.text.primary,
+                            ml: 1
                         }}>
-                        <IconButton sx={{ p: 0, width: 50, height: 50 }}>
-                            <MoreVertIcon sx={{ color: (theme) => theme.palette.primary.main }} />
-                        </IconButton>
-                        <Button
-                            sx={{
-                                height: 50,
-                                width: 90,
-                                borderRadius: 2,
-                                bgcolor: (theme) => theme.palette.primary.main,
-                                color: (theme) => theme.palette.text.primary,
-                                ml: 3
-                            }}>
-                            save
-                        </Button>
-                    </Grid>
-                    <Grid item xs={12}>
-                        <UserAndAvatar />
-                    </Grid>
-                    <Grid item xs={12}>
-
-                    </Grid>
-                </Grid>
+                        save
+                    </Button>
+                </Box>
+                <CommentList />
             </Box>
-        </Card>
+        </Card >
     );
 };
 
