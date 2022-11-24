@@ -5,6 +5,8 @@ export const FORGET_PASSWORD_ROUTE = "/login/forget-password";
 export const FORGOT_PASSWORD = "/forgot-password";
 export const FORGOT_PASSWORD_RESET = "/forgot-password-reset";
 
+export const REGISTRATION_ROUTE = "/registration";
+
 
 export const FULL_WIDTH_ROUTE = "/";
 

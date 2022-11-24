@@ -10,12 +10,14 @@ import {
     FOLLOWERS_ROUTE,
     FOLLOWING_ROUTE,
     POST_ROUTE,
+    REGISTRATION_ROUTE,
 } from "./Routes";
 import DefaultContainer from "./layouts/DefaultContainer";
 import FullWidthContainer from "./layouts/FullWidthContainer";
 import PageNotFoundRoute from "../routes/PageNotFoundRoute";
 import LoginRoute from "../routes/LoginRoute";
 import ForgotPasswordRoute from "../routes/ForgotPasswordRoute";
+import RegistrationRoute from "../routes/RegistrationRoute";
 import AboutRoute from "../routes/AboutRoute";
 import ProfileRoute from "../routes/ProfileRoute";
 import FollowersRoute from "../routes/FollowersRoute";
@@ -29,6 +31,7 @@ const Router = () => {
                 <Route path={DEFAULT_ROUTE} element={<DefaultContainer />} >
                     <Route path={LOGIN_ROUTE} element={<LoginRoute />} />
                     <Route path={FORGOT_PASSWORD} element={<ForgotPasswordRoute />} />
+                    <Route path={REGISTRATION_ROUTE} element={<RegistrationRoute />} />
                     <Route path="*" element={<PageNotFoundRoute />} />
                 </Route>
                 <Route path={FULL_WIDTH_ROUTE} element={<FullWidthContainer />} >
