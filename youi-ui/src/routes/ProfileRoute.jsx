@@ -6,13 +6,12 @@ import {
 } from "./../app/Routes";
 import avatar from "../img/avatar.png";
 import PostsLayout from "../components/posts-layout/PostsLayout";
+import ScrollToTop from "../components/ScrollToTop";
 
 const ProfileRoute = () => {
     return (
         <Grid container sx={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
-            <Grid item xs={12}>
-                {/* // header */}
-            </Grid>
+            <ScrollToTop />
             <Grid item xs={12} sx={{ my: 2 }}>
                 <Avatar alt="Profile icon"
                     variant="circular"
