@@ -2,11 +2,13 @@ import MuiTheme from "./MuiTheme";
 import { BrowserRouter } from "react-router-dom";
 import Router from "./Router";
 import "@fontsource/nunito-sans";
+import Header from "./Header";
 
 const App = () => {
   return (
     <MuiTheme>
       <BrowserRouter>
+        <Header />
         <Router />
       </BrowserRouter>
     </MuiTheme>
