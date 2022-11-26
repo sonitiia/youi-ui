@@ -2,7 +2,7 @@ import MuiTheme from "./MuiTheme";
 import { BrowserRouter } from "react-router-dom";
 import Router from "./Router";
 import "@fontsource/nunito-sans";
-import Header from "./Header";
+import Header from "../components/Header";
 
 const App = () => {
   return (
