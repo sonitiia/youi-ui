@@ -6,32 +6,26 @@ const UserAndAvatar = () => {
     return (
         <Box
             sx={{
+                width: "fit-content",
                 display: "flex",
                 flexDirection: "row",
-                justifyContent: "space-between",
                 alignItems: "center",
-                color: (theme) => theme.palette.primary.main
+                cursor: "pointer"
             }}
         >
-            <Box
+            <Avatar alt="Profile icon"
+                variant="circular"
+                src={avatar}
                 sx={{
-                    my: 3,
-                    display: "flex",
-                    flexDirection: "row",
-                    alignItems: "center",
-                }}
-            >
-                <Avatar alt="Profile icon"
-                    variant="circular"
-                    src={avatar}
-                    sx={{
-                        width: 30,
-                        height: 30,
-                        mr: 2
-                    }} />
-                <Typography variant="body1">sofitymechko</Typography>
-            </Box>
-        </Box>
+                    width: 22,
+                    height: 22,
+                    mr: 1
+                }} />
+            <Typography
+                variant="body1"
+                sx={{ color: (theme) => theme.palette.primary.main }}
+            >sofitymechko</Typography>
+        </Box >
     );
 }
 
