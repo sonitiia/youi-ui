@@ -34,7 +34,7 @@ const ProfileRoute = () => {
             </Grid>
             <Grid item xs={12} sx={{ my: 1 }}>
                 <Typography
-                    variant="body1"
+                    variant="h6"
                     textAlign="center"
                     sx={{
                         color: (theme) => theme.palette.primary.main
@@ -53,7 +53,8 @@ const ProfileRoute = () => {
                     }}>
                     <Link
                         color="primary"
-                        variant="caption"
+                        variant="body2"
+                        fontWeight="bold"
                         to={FOLLOWERS_ROUTE}
                         component={RouterLink}
                         sx={{
@@ -64,7 +65,8 @@ const ProfileRoute = () => {
                     </Link>
                     <Link
                         color="primary"
-                        variant="caption"
+                        variant="body2"
+                        fontWeight="bold"
                         to={FOLLOWING_ROUTE}
                         component={RouterLink}
                         sx={{
