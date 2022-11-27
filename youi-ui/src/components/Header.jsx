@@ -15,9 +15,9 @@ import { ABOUT_ROUTE, DEFAULT_ROUTE, LOGIN_ROUTE } from "../app/Routes";
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
-    backgroundColor: alpha(theme.palette.common.white, 0.15),
+    backgroundColor: alpha(theme.palette.common.black, 0.13),
     '&:hover': {
-        backgroundColor: alpha(theme.palette.common.white, 0.25),
+        backgroundColor: alpha(theme.palette.common.black, 0.2),
     },
     marginLeft: 0,
     width: '100%',
@@ -66,14 +66,14 @@ export default function Header() {
                 <ListItemButton
                     to={DEFAULT_ROUTE}
                     sx={{
-                        height: 56,
+                        minHeight: "6vh",
                         background: (theme) => theme.palette.primary.main,
-                        color: (theme) => theme.palette.primary.light,
+                        color: (theme) => theme.palette.secondary.light,
                     }}
                 >
                     <ListItemText>
                         <Typography
-                            variant="h5"
+                            variant="h4"
                             noWrap
                         >
                             YOUI
@@ -84,9 +84,6 @@ export default function Header() {
                     to={ABOUT_ROUTE}>
                     <ListItemText>About</ListItemText>
                 </ListItemButton>
-                <ListItemButton>
-                    <ListItemText>Help</ListItemText>
-                </ListItemButton>
                 <ListItemButton
                     to={LOGIN_ROUTE}>
                     <ListItemText>Login / Sign up</ListItemText>
@@ -96,15 +93,30 @@ export default function Header() {
                     <ListItemText>Logout</ListItemText>
                 </ListItemButton>
                 <ListItemButton>
+                    <ListItemText>Help</ListItemText>
+                </ListItemButton>
+                <ListItemButton>
                     <ListItemText>Settings</ListItemText>
                 </ListItemButton>
             </List>
         </ >
     );
     return (
-        <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="static">
-                <Toolbar>
+        <Box
+            sx={{
+                flexGrow: 1,
+            }}>
+            <AppBar
+                position="static"
+                sx={{ boxShadow: "none" }}
+            >
+                <Toolbar
+                    elevation={0}
+                    sx={{
+                        minHeight: "6vh",
+                        background: (theme) => theme.palette.secondary.main,
+                        color: (theme) => theme.palette.primary.main,
+                    }}>
                     <IconButton
                         size="large"
                         edge="start"
@@ -118,8 +130,11 @@ export default function Header() {
                     <Typography
                         variant="h5"
                         noWrap
-                        component="div"
-                        sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+                        fontWeight="bold"
+                        sx={{
+                            flexGrow: 1,
+                            display: { xs: 'none', sm: 'block' }
+                        }}
                     >
                         YOUI
                     </Typography>
@@ -140,7 +155,12 @@ export default function Header() {
                 disablePortal
                 onClose={() => setShowNavigation(false)}
                 sx={{
-                    '& .MuiDrawer-paper': { boxSizing: 'border-box', width: 350 },
+                    '& .MuiDrawer-paper': {
+                        background: (theme) => theme.palette.secondary.main,
+                        color: (theme) => theme.palette.primary.main,
+                        boxSizing: 'border-box',
+                        width: 350,
+                    },
                     backdropFilter: "blur(3px)",
                 }}
             >
