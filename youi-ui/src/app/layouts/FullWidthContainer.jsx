@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 
 const FullWidthContainer = () => {
     return (
-        <Container disableGutters maxWidth="xxxl">
+        <Container disableGutters maxWidth="eeexxxxl">
             <Outlet />
         </Container>
     );
