@@ -5,8 +5,8 @@ import {
     FOLLOWING_ROUTE
 } from "./../app/Routes";
 import avatar from "../img/avatar.png";
-import PostsLayout from "../components/posts-layout/PostsLayout";
 import ScrollToTop from "../components/ScrollToTop";
+import MasonryImageList from "../components/MasonryImageList";
 
 const ProfileRoute = () => {
     return (
@@ -76,7 +76,7 @@ const ProfileRoute = () => {
                 </Typography>
             </Grid>
             <Grid item xs={12}>
-                <PostsLayout></PostsLayout>
+                <MasonryImageList />
             </Grid>
         </Grid>
     );
