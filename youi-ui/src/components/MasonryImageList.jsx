@@ -1,16 +1,15 @@
 import * as React from 'react';
-import { useState } from "react";
 import Box from '@mui/material/Box';
 import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
-import ImageListItemBar from '@mui/material/ImageListItemBar';
-import { Button } from '@mui/material';
-import UserAndAvatar from "../components/UserAndAvatar";
+import Post from './Post';
 
 export default function MasonryImageList() {
-    const [isActive, setIsActive] = useState(true);
     return (
-        <Box sx={{ width: "95vw" }}>
+        <Box
+            sx={{
+                mx: "5%"
+            }}
+        >
             <ImageList variant="masonry" gap={20}
                 sx={{
                     width: "100%",
@@ -19,51 +18,21 @@ export default function MasonryImageList() {
                         xs: '1 !important',
                         sm: '2 !important',
                         md: '3 !important',
-                        lg: '5 !important',
-                        xl: '7 !important',
-                        xxl: '9 !important',
-                        xxxl: '12 !important',
+                        lg: '4 !important',
+                        xl: '5 !important',
+                        xxl: '6 !important',
+                        xxxl: '7 !important',
+                        exl: '8 !important',
+                        eexl: '9 !important',
+                        eeexl: '10 !important',
+                        eeexxl: '11 !important',
+                        eeexxxl: '12 !important',
+                        eeexxxxl: '13 !important',
                     },
                 }}
             >
                 {itemData.map((item) => (
-                    <ImageListItem key={item.img}>
-                        <img
-                            src={`${item.img}?w=248&fit=crop&auto=format`}
-                            srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                            alt={item.title}
-                            loading="lazy"
-                            style={{
-                                cursor: "pointer",
-                                borderRadius: 50,
-                                position: "relative"
-                            }}
-                        />
-                        <ImageListItemBar
-                            sx={{
-                                background: 'transparent',
-                                color: (theme) => theme.palette.primary.main,
-                                px: 1
-                            }}
-                            title={<UserAndAvatar></UserAndAvatar>}
-                            position="below"
-                            actionIcon={
-                                <Button
-                                    onClick={() => setIsActive(!isActive)}
-                                    sx={{
-                                        background: (theme) => theme.palette.action.disabled,
-                                        width: "fit-content",
-                                        textAlign: "center",
-                                        borderRadius: 2,
-                                        position: "absolute",
-                                        bottom: 55,
-                                        right: 15,
-                                    }}
-                                > {isActive ? "save" : "delete"}
-                                </Button>
-                            }
-                        />
-                    </ImageListItem>
+                    <Post item={item}></Post>
                 ))}
             </ImageList>
         </Box >
