@@ -11,15 +11,17 @@ const AddComment = ({ onAdd }) => {
     return (
         <Accordion
             elevation={0}
-            sx={{ background: "transparent" }}
+            expanded={true}
+            sx={{
+                background: "transparent",
+            }}
         >
             <AccordionSummary
                 expandIcon={<ExpandMoreRoundedIcon
                     sx={{
                         justifySelf: "flex-start",
-                        color: (theme) => theme.palette.text.contrastText
+                        color: (theme) => theme.palette.text.contrastText,
                     }} />}
-                id="comment-show"
             >
                 <Typography
                     sx={{
