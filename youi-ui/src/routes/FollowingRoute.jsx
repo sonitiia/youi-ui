@@ -12,10 +12,11 @@ const FollowingRoute = () => {
                 onClose={() => { }}
                 open={true}
                 sx={{
-                    backdropFilter: "blur(5px)",
+                    backdropFilter: "blur(3px)",
                 }}
                 PaperProps={{
                     sx: {
+                        background: (theme) => theme.palette.secondary.main,
                         width: "80%",
                         maxWidth: "800px !important",
                         height: "70%",
