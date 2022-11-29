@@ -22,6 +22,31 @@ const RegistrationRoute = () => {
             <Grid item xs={12}>
                 <TextField
                     fullWidth
+                    variant="standard"
+                    type="text"
+                    id="username"
+                    label="Username"
+                    InputProps={{
+                        sx: {
+                            color: (theme) => theme.palette.text.contrastText
+                        }
+                    }}
+                    sx={{
+                        "& .MuiInputLabel-root": {
+                            color: (theme) => theme.palette.text.contrastText
+                        },
+                        "& .MuiOutlinedInput-root": {
+                            "&:hover fieldset": {
+                                borderColor: (theme) => theme.palette.text.contrastText
+                            },
+                        }
+                    }}
+                >
+                </TextField>
+            </Grid>
+            <Grid item xs={12}>
+                <TextField
+                    fullWidth
                     type="email"
                     id="email"
                     label="Email"
@@ -69,6 +94,31 @@ const RegistrationRoute = () => {
                 </TextField>
             </Grid>
             <Grid item xs={12}>
+                <TextField
+                    fullWidth
+                    type="password"
+                    id="password"
+                    label="Confirm password"
+                    InputProps={{
+                        sx: {
+                            color: (theme) => theme.palette.text.contrastText,
+
+                        }
+                    }}
+                    sx={{
+                        "& .MuiInputLabel-root": {
+                            color: (theme) => theme.palette.text.contrastText
+                        },
+                        "& .MuiOutlinedInput-root": {
+                            "&:hover fieldset": {
+                                borderColor: (theme) => theme.palette.text.contrastText
+                            },
+                        },
+                    }}
+                >
+                </TextField>
+            </Grid>
+            <Grid item xs={12}>
                 <Typography
                     variant="body1"
                     sx={{
@@ -87,8 +137,8 @@ const RegistrationRoute = () => {
                         height: "60px",
                         bgcolor: (theme) => theme.palette.primary.main,
                         color: (theme) => theme.palette.text.primary,
-                        borderRadius: "30px",
-                        fontSize: "18px",
+                        borderRadius: 2,
+                        fontSize: 18,
                         fontWeight: "bolder",
                     }}
                 >
