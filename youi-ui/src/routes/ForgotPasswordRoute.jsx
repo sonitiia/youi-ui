@@ -64,15 +64,15 @@ const ForgotPasswordRoute = () => {
                         height: "60px",
                         bgcolor: (theme) => theme.palette.primary.main,
                         color: (theme) => theme.palette.text.primary,
-                        borderRadius: "30px",
-                        fontSize: "18px",
+                        borderRadius: 2,
+                        fontSize: 18,
                         fontWeight: "bolder",
                     }}
                 >
                     send email
                 </Button>
             </Grid>
-        </Grid>
+        </Grid >
     );
 };
 export default ForgotPasswordRoute;
