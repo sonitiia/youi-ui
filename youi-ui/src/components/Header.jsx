@@ -10,7 +10,7 @@ import InputBase from '@mui/material/InputBase';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import { Divider, Drawer, List, ListItemButton, ListItemText } from "@mui/material";
-import { ABOUT_ROUTE, DEFAULT_ROUTE, LOGIN_ROUTE } from "../app/Routes";
+import { ABOUT_ROUTE, DEFAULT_ROUTE, LOGIN_ROUTE, REGISTRATION_ROUTE } from "../app/Routes";
 
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
@@ -86,17 +86,20 @@ export default function Header() {
                 </ListItemButton>
                 <ListItemButton
                     to={LOGIN_ROUTE}>
-                    <ListItemText>Login / Sign up</ListItemText>
+                    <ListItemText>Login</ListItemText>
                 </ListItemButton>
                 <ListItemButton
-                    to={LOGIN_ROUTE}>
-                    <ListItemText>Logout</ListItemText>
+                    to={REGISTRATION_ROUTE}>
+                    <ListItemText>Sign up</ListItemText>
                 </ListItemButton>
                 <ListItemButton>
                     <ListItemText>Help</ListItemText>
                 </ListItemButton>
                 <ListItemButton>
                     <ListItemText>Settings</ListItemText>
+                </ListItemButton>
+                <ListItemButton>
+                    <ListItemText>Log out</ListItemText>
                 </ListItemButton>
             </List>
         </ >
