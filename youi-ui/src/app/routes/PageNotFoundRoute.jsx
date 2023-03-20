@@ -1,26 +1,25 @@
 import { Stack, Typography } from "@mui/material";
 import Button from "@mui/material/Button";
 import { Link as RouterLink } from "react-router-dom";
-import { DEFAULT_ROUTE } from "../../Routes";
+import { DEFAULT_ROUTE } from "../Routes";
+import KeyboardReturnRoundedIcon from '@mui/icons-material/KeyboardReturnRounded';
 
 const PageNotFoundRoute = () => {
     return (
         <Stack
-            spacing={5}
-            mt={10}
+            alignItems="center"
         >
-            <Typography variant="h2">
+            <Typography variant="h6">
                 Oops, page not found.
             </Typography>
             <Button
                 variant="contained"
+                size="large"
                 component={RouterLink}
                 to={DEFAULT_ROUTE}
-                sx={{ p: 5 }}
+                startIcon={<KeyboardReturnRoundedIcon />}
             >
-                <Typography variant="h4">
-                    Return to Main page.
-                </Typography>
+                Return to Main page
             </Button>
         </Stack>
     );

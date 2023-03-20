@@ -1,9 +1,9 @@
 import { Box } from "@mui/system";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import DefaultLayout from "./layouts/DefaultLayout";
 import FullWidthLayout from "./layouts/FullWidthLayout";
-import PageNotFoundRoute from "./layouts/routes/PageNotFoundRoute";
-import { DEFAULT_ROUTE, FULL_WIDTH_ROUTE } from "./Routes";
+import { DEFAULT_ROUTE, FULL_WIDTH_ROUTE, NOT_FOUND_ROUTE } from "./Routes";
+import PageNotFoundRoute from "./routes/PageNotFoundRoute";
 
 
 const Router = () => {
@@ -16,11 +16,13 @@ const Router = () => {
                 alignItems: "center"
             }}>
             <Routes>
-                <Route path={DEFAULT_ROUTE} element={<DefaultLayout />} >
-                    <Route path="*" element={<PageNotFoundRoute />} />
+                <Route path={DEFAULT_ROUTE} element={<DefaultLayout />} >          
+                    <Route path={NOT_FOUND_ROUTE} element={<PageNotFoundRoute />} />
+                    <Route path="*" element={<Navigate to={NOT_FOUND_ROUTE} replace />} />
                 </Route>
                 <Route path={FULL_WIDTH_ROUTE} element={< FullWidthLayout />} >
-                    <Route path="*" element={<PageNotFoundRoute />} />
+                    <Route path={NOT_FOUND_ROUTE} element={<PageNotFoundRoute />} />
+                    <Route path="*" element={<Navigate to={NOT_FOUND_ROUTE} replace />} />
                 </Route>
             </Routes>
         </Box>
